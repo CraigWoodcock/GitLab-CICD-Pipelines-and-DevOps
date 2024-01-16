@@ -23,3 +23,7 @@
 
 ## Gatsby Website Project Pipeline
 
+[Creating a Gatsby Website Pipeline](Gatsby-Website-Project/Gatsby-Website-Pipeline/README.md)
+  - pushing to gitlab
+  - creating yml file
+  - writing script
