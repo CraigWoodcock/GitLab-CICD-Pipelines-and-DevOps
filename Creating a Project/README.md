@@ -1,4 +1,4 @@
-# Creating a GitLab Project
+# Creating a Simple GitLab Pipeline
 
 ## Car Assembly Line Example
 We are going to create a car assembly line. we are using car parts as an example to highlight that in order for the pipeline to succeed, each job relies on the previous job to be successful. With a car, the chassis needs to be made first, then the engine can be mounted and then the wheels go on last because the drive-shaft needs to connect the wheels to the engine. If the wheels are in place before the engine, then we cannot install the drive-shaft and so the build process would fail.
