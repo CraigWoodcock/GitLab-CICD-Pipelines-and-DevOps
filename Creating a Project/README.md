@@ -148,3 +148,7 @@ test the car:
     - We can view/download the artifacts by selecting the 'download' button on the right.
   
 ![Pipeline](<Screenshots/Screenshot 2024-01-16 122133.png>)
+
+- if we check the console we can see all items have been found in the file:
+
+![Console Output](<Screenshots/Screenshot 2024-01-16 122841.png>)
