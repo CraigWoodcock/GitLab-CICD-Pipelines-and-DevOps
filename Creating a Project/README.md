@@ -107,3 +107,44 @@ We are going to create a car assembly line. we are using car parts as an example
     paths:
       - build/
    ```
+
+   - Again, this will fail because we are still overwriting the contents of the car.txt and so the test will not find "chassis" or "engine"
+   - We did this so that we could make sure the tests work correctly.
+
+11. Now let's fix the issue.
+   - we need to replace `>` with `>>` in the build stage for each item.
+   - this will then append each line to the file and our tests will then pass.
+
+```
+stages:
+  - build
+  - test
+
+build the car:
+  stage: build
+  script:
+    - mkdir build
+    - cd build
+    - touch car.txt
+    - echo "chassis" >> car.txt
+    - echo "engine" >> car.txt
+    - echo "wheels" >> car.txt
+  artifacts:
+    paths:
+      - build/
+
+test the car:
+  stage: test
+  script:
+    - test -f build/car.txt
+    - cd build
+    - grep "chassis" car.txt  
+    - grep "engine" car.txt  
+    - grep "wheels" car.txt      
+
+```
+
+12. Now the Pipeline passes.
+    - We can view/download the artifacts by selecting the 'download' button on the right.
+  
+![Pipeline](<Screenshots/Screenshot 2024-01-16 122133.png>)
