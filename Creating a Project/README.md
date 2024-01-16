@@ -16,7 +16,7 @@ We are going to create a car assembly line. we are using car parts as an example
 3. Now we need to add a yaml file
    - Choose 'New File' on the right hand side (this will open VSCode in the web browser).
    - Create a new file called '.gitlab-ci.yml'
-   - yaml means "yaml ain't markdown language".
+   - yaml means "yaml ain't markdown language", it is a config file that defines steps to build, test and deploy applications.
 
 4. Now we need to add some commands to the file.
     - The following will create a job to add "Chassis", "engine" and "wheels" to a text file.
@@ -30,3 +30,6 @@ We are going to create a car assembly line. we are using car parts as an example
     - echo "engine" > car.txt
     - echo "wheels" > car.txt
   ```
+
+  1. On the Left Hand side, choose 'Source Control'
+   - Enter a commit message and select 'Commit to 'main'
