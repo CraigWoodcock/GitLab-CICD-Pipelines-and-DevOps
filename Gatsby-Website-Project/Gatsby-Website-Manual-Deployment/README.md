@@ -1,4 +1,4 @@
-# Creating a Static Website with Gatsby and Gitlab CI
+# Creating a Static Website with Gatsby and Gitlab CI Manually
 
 ## Creating the Gatsby Website
 
@@ -45,4 +45,20 @@
 
 3. Now we can push our website to gitlab
   - `git push -u origin main`
-  - head to gitlab and refresh the repo to see the files  
+  - head to gitlab and refresh the repo to see the files
+
+## Build the Gatsby Project
+1. we need to build the project
+  - `gatsby build`
+  - This will produce static HTML and JavaScript file
+  - Compress CSS/JavaScript files to reduce download size
+  - It will create a folder called 'public' that we can deploy
+  - It will stop the localhost:8000 connection
+
+2. CD into public folder to see contents
+  - `cd public` - this is our 'artifact'
+  - `ls`
+  
+
+
+
