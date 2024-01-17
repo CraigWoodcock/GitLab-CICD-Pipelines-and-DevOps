@@ -1,13 +1,13 @@
 # Deploying the Website Using Surge
 
-## what i susrge
+## what is surge
 surge is a cloud platform for serverless deployments
 its easy to configure and use
 simple deployment process
 ideal for use with simple static websites
 
 
-## Steps for Deployment
+## Steps for Manual Deployment
 
 1. we need to ensure node.js is installed and install surge via npm
   - From inside the /public folder:
@@ -27,3 +27,4 @@ ideal for use with simple static websites
 - Now we can view the website in the browser.
 
 ![Alt text](<Screenshots/Screenshot 2024-01-17 123335.png>)
+
