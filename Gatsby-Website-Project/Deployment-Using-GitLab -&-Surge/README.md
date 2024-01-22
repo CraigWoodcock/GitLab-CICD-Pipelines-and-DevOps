@@ -17,7 +17,9 @@
   - uncheck 'protected variable'
   - check 'mask variable'
   
-3. create a new job in the script:
+## Creating the Script
+
+1. create a new job in the script:
    - install surge
    - define the project and domain to use 
       - this needs to be as unique as possible.
@@ -29,12 +31,12 @@ deploy to surge:
     - surge --project ./public --domain <makeAuniqueName>.surge.sh
 ```
 
-4. Add deploy stage to the script
+2. Add deploy stage to the script
    - Remove node image from individual jobs and move to top of the script
    - add deploy stage to script and jobs
    - push changes and see the pipeline pass
   
-  ```
+```
   image: node:lts
 stages:
   - build
@@ -75,4 +77,25 @@ deploy to surge:
     - surge --project ./public --domain carniverouse-vegintable.surge.sh
   ```
 
+5. test the deployment:
+  - Create a deployment test job
+  - Add test stage to the job
+  - image will be alpin
+  - we need to use apk to install curl
+
+```   
+deployment test:
+  stage: production tests
+  image: alpine
+  script:
+    - apk add --no-cache curl
+    - curl "carniverouse-vegintable.surge.sh" | tac | tac | grep -q "Welcome to"
+```
+we can make certain jobs manual only using the follwing command:
+- this will stop the job and queue all other jobs until this job has been run
+
+```
+when: manual # only runs manually
+  allow_failure: false # stop the pipeline here
+```
 
